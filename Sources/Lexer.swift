@@ -41,7 +41,7 @@ private extension Character {
     }
 }
 
-private extension Array {
+internal extension Array {
     func peek() -> Element? {
         if self.count > 0 {
             return self[0]
@@ -85,6 +85,7 @@ public func ==(a:Token, b:Token) -> Bool {
     case (.TParenRight, .TParenRight): return true
     case (.TOpEquals, .TOpEquals): return true
     case (.TBang, .TBang): return true
+    case (.TComma, .TComma): return true
     default: return false
     }
 }

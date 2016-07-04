@@ -22,6 +22,12 @@
 		CCD7C4CA1D271C0F00764D0B /* LexerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD7C4C91D271C0F00764D0B /* LexerTests.swift */; };
 		CCD7C4CB1D271C0F00764D0B /* LexerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD7C4C91D271C0F00764D0B /* LexerTests.swift */; };
 		CCD7C4CC1D271C0F00764D0B /* LexerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD7C4C91D271C0F00764D0B /* LexerTests.swift */; };
+		CCF831C01D288EAF00884D77 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF831BF1D288EAF00884D77 /* Parser.swift */; };
+		CCF831C11D288EAF00884D77 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF831BF1D288EAF00884D77 /* Parser.swift */; };
+		CCF831C21D288EAF00884D77 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF831BF1D288EAF00884D77 /* Parser.swift */; };
+		CCF831C41D2A8D2D00884D77 /* ParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF831C31D2A8D2D00884D77 /* ParserTests.swift */; };
+		CCF831C51D2A8D2D00884D77 /* ParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF831C31D2A8D2D00884D77 /* ParserTests.swift */; };
+		CCF831C61D2A8D2D00884D77 /* ParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF831C31D2A8D2D00884D77 /* ParserTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +71,8 @@
 		CCD7C4BF1D26EF1E00764D0B /* SwiftyMathParseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyMathParseTests.swift; sourceTree = "<group>"; };
 		CCD7C4C51D26F69C00764D0B /* Lexer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lexer.swift; sourceTree = "<group>"; };
 		CCD7C4C91D271C0F00764D0B /* LexerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LexerTests.swift; sourceTree = "<group>"; };
+		CCF831BF1D288EAF00884D77 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		CCF831C31D2A8D2D00884D77 /* ParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParserTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +152,7 @@
 			children = (
 				CCD7C47E1D26EB2800764D0B /* SwiftyMathParse.h */,
 				CCD7C4C51D26F69C00764D0B /* Lexer.swift */,
+				CCF831BF1D288EAF00884D77 /* Parser.swift */,
 				CCD7C4781D26E96C00764D0B /* Info-iOS.plist */,
 				CCD7C4791D26E96C00764D0B /* Info-macOS.plist */,
 				CCD7C47A1D26E96C00764D0B /* Info-tvOS.plist */,
@@ -190,6 +199,7 @@
 			children = (
 				CCD7C4BF1D26EF1E00764D0B /* SwiftyMathParseTests.swift */,
 				CCD7C4C91D271C0F00764D0B /* LexerTests.swift */,
+				CCF831C31D2A8D2D00884D77 /* ParserTests.swift */,
 				CCD7C4B41D26EEB000764D0B /* SwiftyMathParseTests-macOS */,
 				CCD7C4A51D26EE9500764D0B /* SwiftyMathParseTests-tvOS */,
 				CCD7C4961D26EE0800764D0B /* SwiftyMathParseTests-iOS */,
@@ -436,6 +446,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCF831C01D288EAF00884D77 /* Parser.swift in Sources */,
 				CCD7C4C61D26F69C00764D0B /* Lexer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -444,6 +455,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCF831C11D288EAF00884D77 /* Parser.swift in Sources */,
 				CCD7C4C71D26F69C00764D0B /* Lexer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -452,6 +464,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCF831C21D288EAF00884D77 /* Parser.swift in Sources */,
 				CCD7C4C81D26F69C00764D0B /* Lexer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -462,6 +475,7 @@
 			files = (
 				CCD7C4CA1D271C0F00764D0B /* LexerTests.swift in Sources */,
 				CCD7C4C01D26EF3000764D0B /* SwiftyMathParseTests.swift in Sources */,
+				CCF831C41D2A8D2D00884D77 /* ParserTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +485,7 @@
 			files = (
 				CCD7C4CB1D271C0F00764D0B /* LexerTests.swift in Sources */,
 				CCD7C4C11D26EF3100764D0B /* SwiftyMathParseTests.swift in Sources */,
+				CCF831C51D2A8D2D00884D77 /* ParserTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,6 +495,7 @@
 			files = (
 				CCD7C4CC1D271C0F00764D0B /* LexerTests.swift in Sources */,
 				CCD7C4C21D26EF3100764D0B /* SwiftyMathParseTests.swift in Sources */,
+				CCF831C61D2A8D2D00884D77 /* ParserTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

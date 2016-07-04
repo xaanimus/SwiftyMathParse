@@ -8,15 +8,46 @@
 
 import Foundation
 
-enum BinOpTypes {
+public enum BinOpTypes {
     case Plus, Minus, Times, Divide, Pow
 }
 
-indirect enum AST {
+public indirect enum AST {
     case Number(Double), Var(Character)
     case BinOp(AST, BinOpTypes, AST)
     case Function(String, AST)
     case Equals(AST,AST)
+}
+
+public func ==(a:BinOpTypes, b:BinOpTypes) -> Bool {
+    switch (a,b) {
+    case (.Plus, .Plus) : return true
+    case (.Minus, .Minus) : return true
+    case (.Times, .Times) : return true
+    case (.Divide, .Divide) : return true
+    case (.Pow, .Pow) : return true
+    default: return false
+    }
+}
+
+public func ==(a:AST, b:AST) -> Bool {
+    switch (a,b) {
+    case (.Number(let x), .Number(let y)) where x == y:
+        return true
+    case (.Var(let x), .Var(let y)) where x == y:
+        return true
+    case (.BinOp(let xl, let xo, let xr), .BinOp(let yl, let yo, let yr))
+        where xl == yl && xo == yo && xr == yr:
+        return true
+    case (.Function(let xstr, let xast), .Function(let ystr, let yast))
+        where xstr == ystr && xast == yast:
+        return true
+    case (.Equals(let xl, let xr), .Equals(let yl, let yr))
+        where xl == yl && xr == yr:
+        return true
+    default:
+        return false
+    }
 }
 
 infix operator ~== {precedence 130}
@@ -31,7 +62,7 @@ enum ParseError : ErrorType {
     case Error(String)
 }
 
-class Parser {
+public class Parser {
     
     func parse(tokens: TokenStream) throws -> AST {
         var remainingTokens = tokens

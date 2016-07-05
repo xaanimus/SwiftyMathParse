@@ -46,9 +46,8 @@ class LexerTests: XCTestCase {
     func testLex() {
         do {
             for (testStr, testTokens) in testItems {
-                let result = try lexer.lex(testStr)
-                XCTAssertNotNil(result)
-                assertTokenStreamsEqual(result!, testTokens)
+                let result = try lexer.tokenize(testStr)
+                assertTokenStreamsEqual(result, testTokens)
             }
         } catch let e {
             print(e)
@@ -59,9 +58,8 @@ class LexerTests: XCTestCase {
     func testScanStream() {
         do {
             for (s, results) in stringTestItems {
-                let testPreResult = try lexer.lex(s)
-                XCTAssertNotNil(testPreResult)
-                let testPreResultUnwrapped = testPreResult!
+                let testPreResult = try lexer.tokenize(s)
+                let testPreResultUnwrapped = testPreResult
                 let testResult = lexer.scanStreamForStrings(testPreResultUnwrapped,
                                                             strings: testStrings)
                 assertTokenStreamsEqual(results, testResult)

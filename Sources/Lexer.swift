@@ -161,21 +161,27 @@ class Lexer {
             print()
         }
         
+        if scanString.characters.count > 0 {
+            for c in scanString.characters {
+                resultStream.append(.TVar(c))
+            }
+        }
+        
         return resultStream
         
     }
     
-    func lex(str: String) throws -> TokenStream? {
-        return try lex(str.characters.map{$0})
+    func tokenize(str: String) throws -> TokenStream {
+        return try tokenize(str.characters.map{$0})
     }
     
-    func lex(chars: [Character]) throws -> TokenStream {
+    func tokenize(chars: [Character]) throws -> TokenStream {
         var tokens : TokenStream = []
         
         var remainingChars : [Character] = chars
         
         while remainingChars.count > 0 {
-            if let token = try lexNextToken(&remainingChars) {
+            if let token = try tokenizeNextToken(&remainingChars) {
                 tokens.append(token)
             }
         }
@@ -184,14 +190,14 @@ class Lexer {
     }
     
     //parses next token and returns (remainingChars, parsedToken)
-    private func lexNextToken(inout characters: [Character]) throws -> Token? {
+    private func tokenizeNextToken(inout characters: [Character]) throws -> Token? {
         guard let nextChar = characters.peek() else {
             return nil
         }
         
         switch nextChar {
         case let c where c.isNumericDigit():
-            return lexNumber(&characters)!
+            return tokenizeNumber(&characters)!
         case let c where c.isLetter():
             return .TVar(characters.consume()!)
         case "^": characters.consume()
@@ -218,7 +224,7 @@ class Lexer {
         }
     }
     
-    private func lexNumber(inout characters: [Character]) -> Token? {
+    private func tokenizeNumber(inout characters: [Character]) -> Token? {
         var str = String("")
         
         while (characters.peek() != nil &&

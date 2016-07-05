@@ -17,6 +17,23 @@ public indirect enum AST {
     case BinOp(AST, BinOpTypes, AST)
     case Function(String, AST)
     case Equals(AST,AST)
+    
+    static func fromString(str: String) throws -> AST {
+        return try AST.fromString(str, withFunctions: [])
+    }
+    
+    static func fromString(str: String, withFunctions functions: [String]) throws -> AST {
+        let lexer = Lexer()
+        let parser = Parser()
+        var tokens = try lexer.tokenize(str)
+        
+        if functions.count > 0 {
+            tokens = lexer.scanStreamForStrings(tokens, strings: functions)
+        }
+        
+        let ast = try parser.parse(tokens)
+        return ast
+    }
 }
 
 public func ==(a:BinOpTypes, b:BinOpTypes) -> Bool {
@@ -106,7 +123,7 @@ public class Parser {
         let leftExpr = try parsePow(&tokens)
         
         if tokens.peek() ~== Token.TOpTimes ||
-            tokens.peek() ~== Token.TOpMinus
+            tokens.peek() ~== Token.TOpDivide
         {
             let token = tokens.consume()!
             let rightExpr = try parseMul(&tokens)

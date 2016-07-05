@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC567A4B1D2BE14E0000FC57 /* Eval.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC567A4A1D2BE14E0000FC57 /* Eval.swift */; };
+		CC567A4C1D2BE14E0000FC57 /* Eval.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC567A4A1D2BE14E0000FC57 /* Eval.swift */; };
+		CC567A4D1D2BE14E0000FC57 /* Eval.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC567A4A1D2BE14E0000FC57 /* Eval.swift */; };
+		CC567A4F1D2BE5740000FC57 /* EvalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC567A4E1D2BE5740000FC57 /* EvalTests.swift */; };
+		CC567A501D2BE5740000FC57 /* EvalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC567A4E1D2BE5740000FC57 /* EvalTests.swift */; };
+		CC567A511D2BE5740000FC57 /* EvalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC567A4E1D2BE5740000FC57 /* EvalTests.swift */; };
 		CCD7C47F1D26EB2800764D0B /* SwiftyMathParse.h in Headers */ = {isa = PBXBuildFile; fileRef = CCD7C47E1D26EB2800764D0B /* SwiftyMathParse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CCD7C49A1D26EE0800764D0B /* SwiftyMathParse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCD7C4541D26E7EC00764D0B /* SwiftyMathParse.framework */; };
 		CCD7C4A91D26EE9500764D0B /* SwiftyMathParse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCD7C4621D26E81500764D0B /* SwiftyMathParse.framework */; };
@@ -55,6 +61,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CC567A4A1D2BE14E0000FC57 /* Eval.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Eval.swift; sourceTree = "<group>"; };
+		CC567A4E1D2BE5740000FC57 /* EvalTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EvalTests.swift; sourceTree = "<group>"; };
 		CCD7C4541D26E7EC00764D0B /* SwiftyMathParse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyMathParse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCD7C4621D26E81500764D0B /* SwiftyMathParse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyMathParse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCD7C46F1D26E83000764D0B /* SwiftyMathParse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyMathParse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -153,6 +161,7 @@
 				CCD7C47E1D26EB2800764D0B /* SwiftyMathParse.h */,
 				CCD7C4C51D26F69C00764D0B /* Lexer.swift */,
 				CCF831BF1D288EAF00884D77 /* Parser.swift */,
+				CC567A4A1D2BE14E0000FC57 /* Eval.swift */,
 				CCD7C4781D26E96C00764D0B /* Info-iOS.plist */,
 				CCD7C4791D26E96C00764D0B /* Info-macOS.plist */,
 				CCD7C47A1D26E96C00764D0B /* Info-tvOS.plist */,
@@ -198,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				CCD7C4BF1D26EF1E00764D0B /* SwiftyMathParseTests.swift */,
+				CC567A4E1D2BE5740000FC57 /* EvalTests.swift */,
 				CCD7C4C91D271C0F00764D0B /* LexerTests.swift */,
 				CCF831C31D2A8D2D00884D77 /* ParserTests.swift */,
 				CCD7C4B41D26EEB000764D0B /* SwiftyMathParseTests-macOS */,
@@ -448,6 +458,7 @@
 			files = (
 				CCF831C01D288EAF00884D77 /* Parser.swift in Sources */,
 				CCD7C4C61D26F69C00764D0B /* Lexer.swift in Sources */,
+				CC567A4B1D2BE14E0000FC57 /* Eval.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,6 +468,7 @@
 			files = (
 				CCF831C11D288EAF00884D77 /* Parser.swift in Sources */,
 				CCD7C4C71D26F69C00764D0B /* Lexer.swift in Sources */,
+				CC567A4C1D2BE14E0000FC57 /* Eval.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,6 +478,7 @@
 			files = (
 				CCF831C21D288EAF00884D77 /* Parser.swift in Sources */,
 				CCD7C4C81D26F69C00764D0B /* Lexer.swift in Sources */,
+				CC567A4D1D2BE14E0000FC57 /* Eval.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,6 +487,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCD7C4CA1D271C0F00764D0B /* LexerTests.swift in Sources */,
+				CC567A4F1D2BE5740000FC57 /* EvalTests.swift in Sources */,
 				CCD7C4C01D26EF3000764D0B /* SwiftyMathParseTests.swift in Sources */,
 				CCF831C41D2A8D2D00884D77 /* ParserTests.swift in Sources */,
 			);
@@ -484,6 +498,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCD7C4CB1D271C0F00764D0B /* LexerTests.swift in Sources */,
+				CC567A501D2BE5740000FC57 /* EvalTests.swift in Sources */,
 				CCD7C4C11D26EF3100764D0B /* SwiftyMathParseTests.swift in Sources */,
 				CCF831C51D2A8D2D00884D77 /* ParserTests.swift in Sources */,
 			);
@@ -494,6 +509,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCD7C4CC1D271C0F00764D0B /* LexerTests.swift in Sources */,
+				CC567A511D2BE5740000FC57 /* EvalTests.swift in Sources */,
 				CCD7C4C21D26EF3100764D0B /* SwiftyMathParseTests.swift in Sources */,
 				CCF831C61D2A8D2D00884D77 /* ParserTests.swift in Sources */,
 			);

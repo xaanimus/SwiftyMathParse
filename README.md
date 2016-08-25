@@ -1,7 +1,7 @@
 # SwiftyMathParse
-A math parser for Swift
+<img src="https://raw.githubusercontent.com/xaanimus/SwiftyMathParse/master/assets/IconMain.png" width="500">
 
-![alt text](https://raw.githubusercontent.com/xaanimus/SwiftyMathParse/master/assets/IconMain.png)
+A math parser for Swift
 
 ## Usage
 To parse a string into an AST:
